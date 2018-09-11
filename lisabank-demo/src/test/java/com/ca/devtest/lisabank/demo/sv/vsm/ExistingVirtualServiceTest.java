@@ -38,7 +38,7 @@ public class ExistingVirtualServiceTest {
 	@Rule
 	public VirtualServicesRule rules = new VirtualServicesRule();
 
-	static final Log logger = LogFactory.getLog(SimpleDemo.class);
+	static final Log logger = LogFactory.getLog(ExistingVirtualServiceTest.class);
 	@Autowired
 	private BankService bankServices;
 

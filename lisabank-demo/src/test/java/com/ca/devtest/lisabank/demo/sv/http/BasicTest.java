@@ -1,7 +1,4 @@
-/**
- * 
- */
-package com.ca.devtest.lisabank.demo.sv.vsm;
+package com.ca.devtest.lisabank.demo.sv.http;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
@@ -26,15 +23,16 @@ import com.ca.devtest.sv.devtools.annotation.ProtocolType;
 import com.ca.devtest.sv.devtools.junit.VirtualServiceClassScopeRule;
 import com.ca.devtest.sv.devtools.junit.VirtualServicesRule;
 
+
 /**
- * @author pascal.gasp@ca.com
+ * @author gaspa03
  *
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest(classes = LisaBankClientApplication.class)
 @DevTestVirtualServer()
-public class SimpleDemo {
-	static final Log logger = LogFactory.getLog(SimpleDemo.class);
+public class BasicTest {
+	static final Log logger = LogFactory.getLog(BasicTest.class);
 	@Autowired
 	private BankService bankServices;
 
@@ -59,20 +57,7 @@ public class SimpleDemo {
 		assertEquals(9, users.length);
 	}
 
-	
-	@DevTestVirtualService(serviceName = "getListUser1", 
-			basePath = "/itkoExamples/EJB3UserControlBean", 
-			port = 9081, 
-			workingFolder = "UserServiceTest/getListUser/EJB3UserControlBean1", 
-		requestDataProtocol = {@Protocol(ProtocolType.DPH_SOAP) })
-	@Test
-	public void getListUser1() {
-		User[] users = bankServices.getListUser();
-		assertNotNull(users);
-		printUsers(users);
-		assertEquals(1, users.length);
-	}
-	
+
 	
 	
 	private void printUsers(User[] users) {
