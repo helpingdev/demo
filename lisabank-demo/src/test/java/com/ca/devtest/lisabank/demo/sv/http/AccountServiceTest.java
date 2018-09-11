@@ -17,7 +17,6 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import com.ca.devtest.lisabank.demo.LisaBankClientApplication;
 import com.ca.devtest.lisabank.demo.business.BankService;
 import com.ca.devtest.lisabank.wsdl.Account;
-import com.ca.devtest.lisabank.wsdl.User;
 import com.ca.devtest.sv.devtools.annotation.DevTestVirtualServer;
 import com.ca.devtest.sv.devtools.annotation.DevTestVirtualService;
 import com.ca.devtest.sv.devtools.annotation.Protocol;
