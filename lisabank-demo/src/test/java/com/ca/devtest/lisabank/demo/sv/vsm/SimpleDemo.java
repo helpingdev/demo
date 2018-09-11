@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.ca.devtest.lisabank.demo.sv.http;
+package com.ca.devtest.lisabank.demo.sv.vsm;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
