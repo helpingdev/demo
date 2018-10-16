@@ -37,6 +37,28 @@
 		assertEquals(1, users.length);
 	}
 		
+------------------- FROM RRPAIRS
+Test 
+GenerateRRPairs
+
+
+@DevTestVirtualService(serviceName = "UserServiceTest-EJB3UserControlBean", 
+	port = 9081, basePath = "/itkoExamples/EJB3UserControlBean", 
+	workingFolder = "rawtraffic/rrpairs/itkoExamples/EJB3UserControlBean", 
+	requestDataProtocol = {
+	@Protocol(ProtocolType.DPH_SOAP) })
+	
+	@DevTestVirtualService(serviceName = "UserServiceTest-EJB3AccountControlBean", 
+	port = 9081, basePath = "/itkoExamples/EJB3AccountControlBean", 
+	workingFolder = "rawtraffic/rrpairs/itkoExamples/EJB3AccountControlBean", 
+	requestDataProtocol = {
+	@Protocol(ProtocolType.DPH_SOAP) })	
+	
+	
+	
+	
+	
+	
 	
 	----------------------
 	@DevTestVirtualService(serviceName = "getListUserTemplate", 
