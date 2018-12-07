@@ -63,6 +63,23 @@ public class BasicTest {
 		assertEquals(0, users.length);
 	}
 
+	
+	@DevTestVirtualService(serviceName = "getListUserTemplate", 
+			basePath = "/itkoExamples/EJB3UserControlBean", 
+			port = 9081, workingFolder = "UserServiceTest/getListUser/template", 
+			parameters={@Parameter(name="email", value="pascal.gasp@gmail.com"),
+			@Parameter(name="nom", value="Gasp"),
+			@Parameter(name="login", value="pgasp"),
+			@Parameter(name="pwd", value="HELLO")},
+			requestDataProtocol = {
+			@Protocol(ProtocolType.DPH_SOAP) })
+	@Test
+	public void getListUserTemplate() {
+		User[] users = bankServices.getListUser();
+		assertNotNull(users);
+		assertEquals(1, users.length);
+		printUsers(users);
+	}
 	private void printUsers(User[] users) {
 		for (User user : users) {
 			logger.info(user.getFname() + " " + user.getLname() + " " + user.getLogin());
