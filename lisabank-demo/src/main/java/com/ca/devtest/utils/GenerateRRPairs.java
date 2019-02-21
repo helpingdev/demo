@@ -25,7 +25,7 @@ public class GenerateRRPairs {
 		
 		
 		try {
-			FromRawTrafficTestReferentialGenerator.generateRRPairFromRawFiles("/Users/gaspa03/git/svascode/lisabank-demo/src/test/resources/rawtraffic/");
+			FromRawTrafficTestReferentialGenerator.generateRRPairFromRawFiles("/Users/gaspa03/git/svascode-demo/lisabank-demo/src/test/resources/rawtraffic");
 		} catch (XPathExpressionException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

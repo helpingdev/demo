@@ -20,6 +20,8 @@ import com.ca.devtest.lisabank.wsdl.User;
 import com.ca.devtest.sv.devtools.annotation.DevTestVirtualServer;
 import com.ca.devtest.sv.devtools.annotation.DevTestVirtualService;
 import com.ca.devtest.sv.devtools.annotation.Parameter;
+import com.ca.devtest.sv.devtools.annotation.Protocol;
+import com.ca.devtest.sv.devtools.annotation.ProtocolType;
 import com.ca.devtest.sv.devtools.annotation.VirtualServiceType;
 import com.ca.devtest.sv.devtools.junit.VirtualServiceClassScopeRule;
 import com.ca.devtest.sv.devtools.junit.VirtualServicesRule;
@@ -42,7 +44,7 @@ public class ExistingVirtualServiceTest {
 	@Autowired
 	private BankService bankServices;
 
-	
+
 	@Test
 	public void getListUser() {
 
